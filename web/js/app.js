@@ -126,7 +126,7 @@ document.getElementById('predict-form').addEventListener('submit', async functio
     resultBox.classList.remove('hidden');
 
     try {
-        const response = await fetch('http://localhost:8000/predict', {
+        const response = await fetch('https://maternal-mental-health-impact-on-infant.onrender.com/predict', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
@@ -169,7 +169,7 @@ document.getElementById('predict-form').addEventListener('submit', async functio
 
 
 // --- Clear Form Logic ---
-document.getElementById("clear-btn").addEventListener("click", function() {
+document.getElementById("clear-btn").addEventListener("click", function () {
     document.getElementById("predict-form").reset();
     document.getElementById("prediction-result").classList.add("hidden");
 });
